@@ -113,12 +113,52 @@
     <div class="eq-card">
       <div class="eq-label">Equation of Center</div>
       <div class="eq-formula">λ = L + 1.915 sin g + 0.020 sin 2g</div>
-      <div class="eq-note">Corrects from circular to elliptical orbit — the Sun's apparent longitude.</div>
+      <div class="eq-note">Corrects from circular to elliptical orbit, producing the Sun's apparent longitude.</div>
     </div>
     <div class="eq-card">
       <div class="eq-label">Moon Mean Longitude</div>
       <div class="eq-formula">L = 218.3164° + 13.176396° × n</div>
       <div class="eq-note">Moon moves ~13.2° per day; apparent longitude corrected via ephem.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Mercury Mean Longitude</div>
+      <div class="eq-formula">L = 252.2508° + 4.09233445° × n</div>
+      <div class="eq-note">Fastest planet; PyEphem resolves apparent geocentric longitude from the orbit.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Venus Mean Longitude</div>
+      <div class="eq-formula">L = 181.9797° + 1.60213034° × n</div>
+      <div class="eq-note">Inner-planet motion is converted to apparent ecliptic longitude for the report.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Mars Mean Longitude</div>
+      <div class="eq-formula">L = 355.4330° + 0.52402068° × n</div>
+      <div class="eq-note">Mean orbital motion advances about half a degree per day before correction.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Jupiter Mean Longitude</div>
+      <div class="eq-formula">L = 34.3515° + 0.08308529° × n</div>
+      <div class="eq-note">Slower outer-planet motion creates long zodiac-sector residence times.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Saturn Mean Longitude</div>
+      <div class="eq-formula">L = 50.0774° + 0.03344414° × n</div>
+      <div class="eq-note">Small daily motion still maps into the same 30° sector system.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Uranus Mean Longitude</div>
+      <div class="eq-formula">L = 314.0550° + 0.01172834° × n</div>
+      <div class="eq-note">Long orbital period means sign shifts are measured across years.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Neptune Mean Longitude</div>
+      <div class="eq-formula">L = 304.3487° + 0.00598103° × n</div>
+      <div class="eq-note">A very small daily rate is refined into apparent longitude by the ephemeris.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Pluto Mean Longitude</div>
+      <div class="eq-formula">L = 238.9290° + 0.00396° × n</div>
+      <div class="eq-note">Slow generational motion is still reduced to longitude and zodiac sector.</div>
     </div>
     <div class="eq-card">
       <div class="eq-label">Zodiac Sector</div>
@@ -277,28 +317,132 @@
           </thead>
           <tbody>
             <tr>
-              <td><span class="planet-dot" style="background:#1a4fd6"></span>Sun</td>
+              <td><span class="planet-dot" style="background:#f5b642"></span>Sun</td>
               <td>Taurus</td>
-              <td>42.18°</td>
-              <td class="calc-cell">3+3+2+1 = 6</td>
-              <td class="vib-num">6</td>
+              <td>55.03°</td>
+              <td class="calc-cell">sector 2 + deg digits 10 = 12 → 3</td>
+              <td class="vib-num">3</td>
               <td>
                 <div class="influence-bar-wrap">
-                  <div class="influence-bar" style="width:58%"></div>
-                  <span>58%</span>
+                  <div class="influence-bar" style="width:3.3%; background:#f5b642"></div>
+                  <span>3.3%</span>
                 </div>
               </td>
             </tr>
             <tr>
               <td><span class="planet-dot" style="background:#6b8de3"></span>Moon</td>
               <td>Scorpio</td>
-              <td>217.44°</td>
-              <td class="calc-cell">1+7+4+8 = 20 → 2</td>
-              <td class="vib-num">2</td>
+              <td>220.93°</td>
+              <td class="calc-cell">sector 8 + deg digits 4 = 12 → 3</td>
+              <td class="vib-num">3</td>
               <td>
                 <div class="influence-bar-wrap">
-                  <div class="influence-bar" style="width:42%"></div>
-                  <span>42%</span>
+                  <div class="influence-bar" style="width:13.4%; background:#6b8de3"></div>
+                  <span>13.4%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="planet-dot" style="background:#8b8f9a"></span>Mercury</td>
+              <td>Taurus</td>
+              <td>37.60°</td>
+              <td class="calc-cell">sector 2 + deg digits 10 = 12 → 3</td>
+              <td class="vib-num">3</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:2.3%; background:#8b8f9a"></div>
+                  <span>2.3%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="planet-dot" style="background:#c47ac0"></span>Venus</td>
+              <td>Taurus</td>
+              <td>47.16°</td>
+              <td class="calc-cell">sector 2 + deg digits 11 = 13 → 4</td>
+              <td class="vib-num">4</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:2.9%; background:#c47ac0"></div>
+                  <span>2.9%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="planet-dot" style="background:#d65a4a"></span>Mars</td>
+              <td>Aries</td>
+              <td>7.46°</td>
+              <td class="calc-cell">sector 1 + deg digits 7 = 8 → 8</td>
+              <td class="vib-num">8</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:0.5%; background:#d65a4a"></div>
+                  <span>0.5%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="planet-dot" style="background:#b8863b"></span>Jupiter</td>
+              <td>Virgo</td>
+              <td>155.06°</td>
+              <td class="calc-cell">sector 6 + deg digits 11 = 17 → 8</td>
+              <td class="vib-num">8</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:9.4%; background:#b8863b"></div>
+                  <span>9.4%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="planet-dot" style="background:#7a6a4f"></span>Saturn</td>
+              <td>Aquarius</td>
+              <td>318.45°</td>
+              <td class="calc-cell">sector 11 + deg digits 12 = 14 → 5</td>
+              <td class="vib-num">5</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:19.3%; background:#7a6a4f"></div>
+                  <span>19.3%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="planet-dot" style="background:#4fb3b8"></span>Uranus</td>
+              <td>Capricorn</td>
+              <td>287.89°</td>
+              <td class="calc-cell">sector 10 + deg digits 17 = 18 → 9</td>
+              <td class="vib-num">9</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:17.4%; background:#4fb3b8"></div>
+                  <span>17.4%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="planet-dot" style="background:#4c6edb"></span>Neptune</td>
+              <td>Capricorn</td>
+              <td>288.89°</td>
+              <td class="calc-cell">sector 10 + deg digits 18 = 19 → 1</td>
+              <td class="vib-num">1</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:17.5%; background:#4c6edb"></div>
+                  <span>17.5%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="planet-dot" style="background:#6f4a8e"></span>Pluto</td>
+              <td>Scorpio</td>
+              <td>231.57°</td>
+              <td class="calc-cell">sector 8 + deg digits 6 = 14 → 5</td>
+              <td class="vib-num">5</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:14%; background:#6f4a8e"></div>
+                  <span>14%</span>
                 </div>
               </td>
             </tr>
@@ -312,8 +456,16 @@
       <div class="sample-card-title">Influence Distribution</div>
       <canvas id="sampleDonut" width="200" height="200"></canvas>
       <div class="donut-legend">
-        <div class="legend-item"><span class="legend-dot" style="background:#1a4fd6"></span>Sun — 58%</div>
-        <div class="legend-item"><span class="legend-dot" style="background:#6b8de3"></span>Moon — 42%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#f5b642"></span>Sun - 3.3%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#6b8de3"></span>Moon - 13.4%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#8b8f9a"></span>Mercury - 2.3%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#c47ac0"></span>Venus - 2.9%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#d65a4a"></span>Mars - 0.5%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#b8863b"></span>Jupiter - 9.4%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#7a6a4f"></span>Saturn - 19.3%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#4fb3b8"></span>Uranus - 17.4%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#4c6edb"></span>Neptune - 17.5%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#6f4a8e"></span>Pluto - 14%</div>
       </div>
     </div>
   </div>
@@ -375,8 +527,16 @@
   document.addEventListener('DOMContentLoaded', function () {
     drawOrbitalDiagram('orbitalCanvas');
     drawDonut('sampleDonut', [
-      { label: 'Sun', value: 58, color: '#1a4fd6' },
-      { label: 'Moon', value: 42, color: '#6b8de3' },
+      { label: 'Sun', value: 3.3, color: '#f5b642' },
+      { label: 'Moon', value: 13.4, color: '#6b8de3' },
+      { label: 'Mercury', value: 2.3, color: '#8b8f9a' },
+      { label: 'Venus', value: 2.9, color: '#c47ac0' },
+      { label: 'Mars', value: 0.5, color: '#d65a4a' },
+      { label: 'Jupiter', value: 9.4, color: '#b8863b' },
+      { label: 'Saturn', value: 19.3, color: '#7a6a4f' },
+      { label: 'Uranus', value: 17.4, color: '#4fb3b8' },
+      { label: 'Neptune', value: 17.5, color: '#4c6edb' },
+      { label: 'Pluto', value: 14, color: '#6f4a8e' },
     ]);
   });
 </script>
