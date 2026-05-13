@@ -1,0 +1,365 @@
+{% extends "base.html" %}
+
+{% block title %}Math Report — Natal Numbers{% endblock %}
+
+{% block head %}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    chtml: {
+      scale: 0.92
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="report-page">
+
+  <!-- Report header -->
+  <div class="report-header">
+    <div class="report-header-left">
+      <p class="section-eyebrow">Your Math Breakdown</p>
+      <h1 class="report-title">
+        {% if place %}{{ place }} · {% endif %}{{ local_str }} <span class="report-tz">({{ timezone }})</span>
+      </h1>
+      <p class="report-utc">UTC: {{ utc_str }} &nbsp;·&nbsp; JD: {{ "%.6f"|format(jd) }}</p>
+    </div>
+    <a href="/#get-chart" class="btn btn-outline">Run Another Chart</a>
+  </div>
+
+  <!-- Three-column dashboard -->
+  <div class="report-dashboard">
+
+    <!-- ── LEFT: Numerology ── -->
+    <div class="report-col report-col-left">
+      <div class="dash-card">
+        <div class="dash-card-title">Numerology Summary</div>
+        <p class="dash-card-sub">Derived from {{ birth_date_long }} via digit reduction.</p>
+        <table class="num-table full-width">
+          <tbody>
+            {% for item in numerology %}
+            {% set detail_href = "/numerology?birth_date=" ~ birth_date_iso ~ "#" ~ item.id %}
+            <tr class="num-link-row">
+              <td>
+                <a class="num-link" href="{{ detail_href }}" aria-label="View detailed {{ item.label }} breakdown">
+                  {{ item.label }}
+                </a>
+              </td>
+              <td class="num-val">
+                <a class="num-link num-value-link" href="{{ detail_href }}" aria-hidden="true" tabindex="-1">
+                  {{ item.value }}
+                </a>
+              </td>
+            </tr>
+            <tr class="num-steps-row">
+              <td colspan="2" class="num-steps">
+                <a class="num-steps-link" href="{{ detail_href }}">{{ item.steps }} · View full breakdown</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- UTC conversion card -->
+      <div class="dash-card dash-card-sm">
+        <div class="dash-card-title">Time Conversion</div>
+        <table class="num-table full-width">
+          <tbody>
+            <tr><td>Local</td><td class="mono">{{ local_str }}</td></tr>
+            <tr><td>Zone</td><td class="mono">{{ timezone }}</td></tr>
+            <tr><td>UTC</td><td class="mono">{{ utc_str }}</td></tr>
+            <tr><td>Julian Day</td><td class="mono">{{ "%.6f"|format(jd) }}</td></tr>
+            <tr><td>n (days since J2000)</td><td class="mono">{{ "%.4f"|format(jd - 2451545.0) }}</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ── CENTER: Natal chart positions table ── -->
+    <div class="report-col report-col-center">
+      <div class="dash-card dash-card-full">
+        <div class="dash-card-title">Natal Chart Positions</div>
+        <p class="dash-card-sub">Apparent geocentric ecliptic longitudes mapped to 30° tropical zodiac sectors.</p>
+
+        <div class="planet-table-wrap">
+          <table class="planet-table">
+            <thead>
+              <tr>
+                <th>Body</th>
+                <th>Position</th>
+                <th>Longitude λ</th>
+                <th>Calculation</th>
+                <th>Vib #</th>
+                <th>Influence</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for p in planets %}
+              <tr>
+                <td>
+                  <span class="planet-dot" style="background:{{ p.color }}"></span>
+                  <strong>{{ p.label }}</strong>
+                </td>
+                <td>
+                  <span class="sign-badge">{{ p.sign }}</span>
+                  <span class="mono position-degree">{{ p.degree_decimal }}</span>
+                </td>
+                <td class="mono">{{ p.longitude }}</td>
+                <td class="calc-cell">
+                  <div class="calc-card" tabindex="0" aria-label="Calculation breakdown for {{ p.name }}">
+                    <div class="calc-formula">{{ p.calc_tex }}</div>
+                    <div class="calc-hover-hint">Hover for breakdown</div>
+                    <div class="calc-breakdown">
+                      {% for step in p.calc_steps %}
+                      <div class="calc-step">
+                        <div class="calc-step-label">{{ step.label }}</div>
+                        <div class="calc-step-tex">{{ step.tex }}</div>
+                        {% if step.note %}
+                        <div class="calc-step-note">{{ step.note }}</div>
+                        {% endif %}
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </td>
+                <td class="vib-num">{{ p.vib }}<br><span class="vib-steps">{{ p.vib_steps }}</span></td>
+                <td>
+                  <div class="influence-bar-wrap">
+                    <div class="influence-bar" style="width:{{ p.influence }}%"></div>
+                    <span>{{ p.influence }}%</span>
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Sector reference -->
+        <details class="sector-ref">
+          <summary>Zodiac sector reference (0°–360°)</summary>
+          <div class="sector-grid">
+            {% set signs = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'] %}
+            {% for s in signs %}
+            <div class="sector-item">
+              <span class="sector-name">{{ s }}</span>
+              <span class="sector-range">{{ loop.index0 * 30 }}°–{{ loop.index * 30 }}°</span>
+            </div>
+            {% endfor %}
+          </div>
+        </details>
+      </div>
+
+      <!-- Step-by-step explainer -->
+      <div class="dash-card dash-card-full">
+        <div class="dash-card-title">Calculation Pipeline</div>
+        <ol class="pipeline-steps">
+          <li><strong>Local time → UTC</strong><br>{{ local_str }} ({{ timezone }}) → {{ utc_str }}</li>
+          <li><strong>UTC → Julian Day</strong><br><code>JD = {{ "%.6f"|format(jd) }}</code></li>
+          <li><strong>Julian Day → n (days since J2000.0)</strong><br><code>n = JD − 2451545.0 = {{ "%.4f"|format(jd - 2451545.0) }}</code></li>
+          <li><strong>Ephemeris position for each body</strong><br><code>λ = PyEphem apparent geocentric ecliptic longitude, normalized to 0° ≤ λ &lt; 360°</code></li>
+          <li><strong>Zodiac sector</strong><br><code>sector = ⌊ λ ÷ 30 ⌋</code> maps each longitude to one of twelve 30° tropical arcs.</li>
+          <li><strong>Degree inside the sign</strong><br><code>degree = λ - sector × 30</code> gives the displayed sign position.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ── RIGHT: Donut + legend ── -->
+    <div class="report-col report-col-right">
+      <div class="dash-card">
+        <div class="dash-card-title">Influence Distribution</div>
+        <p class="dash-card-sub">Normalized from ecliptic longitude weights.</p>
+        <div class="donut-wrap">
+          <canvas id="reportDonut" width="220" height="220"></canvas>
+        </div>
+        <div class="donut-legend">
+          {% for p in planets %}
+          <div class="legend-item">
+            <span class="legend-dot" style="background:{{ p.color }}"></span>
+            {{ p.label }} ({{ p.sign }}) - {{ p.influence }}%
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Sign summary -->
+      <div class="dash-card dash-card-sm">
+        <div class="dash-card-title">Sign Summary</div>
+        <div class="sign-summary">
+          {% for p in planets %}
+          <div class="sign-row">
+            <span class="sign-planet"><span class="planet-dot" style="background:{{ p.color }}"></span>{{ p.label }}</span>
+            <span class="sign-badge">{{ p.sign }}</span>
+            <span class="mono sign-deg">{{ p.degree }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Sector visualization -->
+      <div class="dash-card dash-card-sm">
+        <div class="dash-card-title">Ecliptic Position</div>
+        <canvas id="eclipticRing" width="220" height="220"></canvas>
+      </div>
+    </div>
+
+  </div><!-- end report-dashboard -->
+
+  <section class="interpretation-section" aria-labelledby="placement-insights-title">
+    <div class="interpretation-header">
+      <div>
+        <p class="section-eyebrow">Placement Insights</p>
+        <h2 id="placement-insights-title">Sign and Planet Position Profile</h2>
+        <p class="interpretation-sub">
+          The source sign notes are converted into structured strengths, growth edges, domains, and stat bars.
+          Expand any placement to read the complete original interpretation.
+        </p>
+      </div>
+    </div>
+
+    <div class="interpretation-overview">
+      <div class="dash-card">
+        <div class="dash-card-title">Chart Stat Balance</div>
+        <p class="dash-card-sub">Averaged from the active planet/sign placements.</p>
+        <div class="stat-stack">
+          {% for stat in chart_stat_summary %}
+          <div class="stat-line">
+            <div class="stat-line-label">
+              <span>{{ stat.label }}</span>
+              <strong>{{ stat.value }}%</strong>
+            </div>
+            <div class="stat-track">
+              <div class="stat-fill" style="width:{{ stat.value }}%"></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-title">Recurring Themes</div>
+        <p class="dash-card-sub">Themes repeated across multiple placements rise to the top.</p>
+        <div class="theme-cloud">
+          {% for theme in chart_theme_summary %}
+          <div class="theme-pill" style="--theme-weight: {{ theme.weight }}%">
+            <span>{{ theme.label }}</span>
+            <strong>{{ theme.count }}</strong>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-title">Strengths vs Growth Edges</div>
+        <div class="dual-list">
+          <div>
+            <h3>Supported Strengths</h3>
+            <ul>
+              {% for item in chart_strengths %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div>
+            <h3>Growth Edges</h3>
+            <ul>
+              {% for item in chart_growth_edges %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="placement-grid">
+      {% for p in planets %}
+      {% if p.interpretation %}
+      {% set interp = p.interpretation %}
+      <article class="placement-card">
+        <div class="placement-card-head">
+          <div>
+            <div class="placement-kicker">
+              <span class="planet-dot" style="background:{{ p.color }}"></span>
+              {{ p.label }} in {{ p.sign }}
+            </div>
+            <h3>{{ interp.heading_raw }}</h3>
+          </div>
+          <span class="placement-degree">{{ p.degree }}</span>
+        </div>
+
+        <p class="placement-summary">{{ interp.summary }}</p>
+
+        <div class="placement-stat-grid">
+          {% for stat in interp.stat_scores %}
+          <div class="mini-stat">
+            <div class="mini-stat-label">
+              <span>{{ stat.label }}</span>
+              <strong>{{ stat.value }}</strong>
+            </div>
+            <div class="stat-track">
+              <div class="stat-fill" style="width:{{ stat.value }}%"></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="insight-columns">
+          <div>
+            <h4>Good At</h4>
+            <div class="chip-list">
+              {% for strength in interp.strengths %}
+              <span class="info-chip">{{ strength }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          <div>
+            <h4>May Struggle With</h4>
+            <div class="chip-list">
+              {% for edge in interp.growth_edges %}
+              <span class="info-chip info-chip-soft">{{ edge }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="domain-row">
+          {% for domain in interp.life_domains %}
+          <span>{{ domain }}</span>
+          {% endfor %}
+        </div>
+
+        <details class="placement-source">
+          <summary>Read complete placement meaning</summary>
+          <p>{{ interp.themes_text }}</p>
+          <p>{{ interp.life_growth_text }}</p>
+        </details>
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+</div><!-- end report-page -->
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/orbital.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var planets = {{ planets | tojson }};
+    var donutData = planets.map(function(p) {
+      return { label: p.name, value: p.influence, color: p.color };
+    });
+    drawDonut('reportDonut', donutData);
+    drawEclipticRing('eclipticRing', planets);
+  });
+</script>
+{% endblock %}

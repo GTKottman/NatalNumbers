@@ -1,0 +1,2398 @@
+{
+  "reference_utc": "2026-06-15T12:00:00Z",
+  "zone_count": 598,
+  "zones": {
+    "Africa/Abidjan": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Accra": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Addis_Ababa": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Africa/Algiers": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Asmara": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Africa/Asmera": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Africa/Bamako": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Bangui": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Banjul": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Bissau": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Blantyre": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Brazzaville": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Bujumbura": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Cairo": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Africa/Casablanca": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Ceuta": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Conakry": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Dakar": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Dar_es_Salaam": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Africa/Djibouti": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Africa/Douala": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/El_Aaiun": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Freetown": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Gaborone": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Harare": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Johannesburg": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Juba": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Kampala": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Africa/Khartoum": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Kigali": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Kinshasa": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Lagos": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Libreville": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Lome": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Luanda": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Lubumbashi": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Lusaka": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Malabo": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Maputo": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Maseru": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Mbabane": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Mogadishu": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Africa/Monrovia": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Nairobi": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Africa/Ndjamena": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Niamey": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Nouakchott": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Ouagadougou": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Porto-Novo": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Sao_Tome": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Timbuktu": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Africa/Tripoli": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Africa/Tunis": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Africa/Windhoek": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "America/Adak": {
+      "offset_minutes": -540,
+      "offset_utc": "-09:00"
+    },
+    "America/Anchorage": {
+      "offset_minutes": -480,
+      "offset_utc": "-08:00"
+    },
+    "America/Anguilla": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Antigua": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Araguaina": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/Buenos_Aires": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/Catamarca": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/ComodRivadavia": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/Cordoba": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/Jujuy": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/La_Rioja": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/Mendoza": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/Rio_Gallegos": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/Salta": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/San_Juan": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/San_Luis": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/Tucuman": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Argentina/Ushuaia": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Aruba": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Asuncion": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Atikokan": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Atka": {
+      "offset_minutes": -540,
+      "offset_utc": "-09:00"
+    },
+    "America/Bahia": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Bahia_Banderas": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Barbados": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Belem": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Belize": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Blanc-Sablon": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Boa_Vista": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Bogota": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Boise": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Buenos_Aires": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Cambridge_Bay": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Campo_Grande": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Cancun": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Caracas": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Catamarca": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Cayenne": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Cayman": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Chicago": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Chihuahua": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Ciudad_Juarez": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Coral_Harbour": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Cordoba": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Costa_Rica": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Coyhaique": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Creston": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Cuiaba": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Curacao": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Danmarkshavn": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "America/Dawson": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Dawson_Creek": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Denver": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Detroit": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Dominica": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Edmonton": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Eirunepe": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/El_Salvador": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Ensenada": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Fort_Nelson": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Fort_Wayne": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Fortaleza": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Glace_Bay": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Godthab": {
+      "offset_minutes": -60,
+      "offset_utc": "-01:00"
+    },
+    "America/Goose_Bay": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Grand_Turk": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Grenada": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Guadeloupe": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Guatemala": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Guayaquil": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Guyana": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Halifax": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Havana": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Hermosillo": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Indiana/Indianapolis": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Indiana/Knox": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Indiana/Marengo": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Indiana/Petersburg": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Indiana/Tell_City": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Indiana/Vevay": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Indiana/Vincennes": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Indiana/Winamac": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Indianapolis": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Inuvik": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Iqaluit": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Jamaica": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Jujuy": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Juneau": {
+      "offset_minutes": -480,
+      "offset_utc": "-08:00"
+    },
+    "America/Kentucky/Louisville": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Kentucky/Monticello": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Knox_IN": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Kralendijk": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/La_Paz": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Lima": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Los_Angeles": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Louisville": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Lower_Princes": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Maceio": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Managua": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Manaus": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Marigot": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Martinique": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Matamoros": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Mazatlan": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Mendoza": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Menominee": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Merida": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Metlakatla": {
+      "offset_minutes": -480,
+      "offset_utc": "-08:00"
+    },
+    "America/Mexico_City": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Miquelon": {
+      "offset_minutes": -120,
+      "offset_utc": "-02:00"
+    },
+    "America/Moncton": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Monterrey": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Montevideo": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Montreal": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Montserrat": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Nassau": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/New_York": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Nipigon": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Nome": {
+      "offset_minutes": -480,
+      "offset_utc": "-08:00"
+    },
+    "America/Noronha": {
+      "offset_minutes": -120,
+      "offset_utc": "-02:00"
+    },
+    "America/North_Dakota/Beulah": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/North_Dakota/Center": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/North_Dakota/New_Salem": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Nuuk": {
+      "offset_minutes": -60,
+      "offset_utc": "-01:00"
+    },
+    "America/Ojinaga": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Panama": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Pangnirtung": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Paramaribo": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Phoenix": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Port-au-Prince": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Port_of_Spain": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Porto_Acre": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Porto_Velho": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Puerto_Rico": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Punta_Arenas": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Rainy_River": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Rankin_Inlet": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Recife": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Regina": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Resolute": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Rio_Branco": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Rosario": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Santa_Isabel": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Santarem": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Santiago": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Santo_Domingo": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Sao_Paulo": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Scoresbysund": {
+      "offset_minutes": -60,
+      "offset_utc": "-01:00"
+    },
+    "America/Shiprock": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Sitka": {
+      "offset_minutes": -480,
+      "offset_utc": "-08:00"
+    },
+    "America/St_Barthelemy": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/St_Johns": {
+      "offset_minutes": -150,
+      "offset_utc": "-02:30"
+    },
+    "America/St_Kitts": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/St_Lucia": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/St_Thomas": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/St_Vincent": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Swift_Current": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Tegucigalpa": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "America/Thule": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "America/Thunder_Bay": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Tijuana": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Toronto": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Tortola": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Vancouver": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Virgin": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "America/Whitehorse": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "America/Winnipeg": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "America/Yakutat": {
+      "offset_minutes": -480,
+      "offset_utc": "-08:00"
+    },
+    "America/Yellowknife": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "Antarctica/Casey": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Antarctica/Davis": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Antarctica/DumontDUrville": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Antarctica/Macquarie": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Antarctica/Mawson": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Antarctica/McMurdo": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Antarctica/Palmer": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "Antarctica/Rothera": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "Antarctica/South_Pole": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Antarctica/Syowa": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Antarctica/Troll": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Antarctica/Vostok": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Arctic/Longyearbyen": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Asia/Aden": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Almaty": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Amman": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Anadyr": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Asia/Aqtau": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Aqtobe": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Ashgabat": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Ashkhabad": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Atyrau": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Baghdad": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Bahrain": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Baku": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Asia/Bangkok": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Barnaul": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Beirut": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Bishkek": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Asia/Brunei": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Calcutta": {
+      "offset_minutes": 330,
+      "offset_utc": "+05:30"
+    },
+    "Asia/Chita": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Asia/Choibalsan": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Chongqing": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Chungking": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Colombo": {
+      "offset_minutes": 330,
+      "offset_utc": "+05:30"
+    },
+    "Asia/Dacca": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Asia/Damascus": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Dhaka": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Asia/Dili": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Asia/Dubai": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Asia/Dushanbe": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Famagusta": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Gaza": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Harbin": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Hebron": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Ho_Chi_Minh": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Hong_Kong": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Hovd": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Irkutsk": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Istanbul": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Jakarta": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Jayapura": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Asia/Jerusalem": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Kabul": {
+      "offset_minutes": 270,
+      "offset_utc": "+04:30"
+    },
+    "Asia/Kamchatka": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Asia/Karachi": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Kashgar": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Asia/Kathmandu": {
+      "offset_minutes": 345,
+      "offset_utc": "+05:45"
+    },
+    "Asia/Katmandu": {
+      "offset_minutes": 345,
+      "offset_utc": "+05:45"
+    },
+    "Asia/Khandyga": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Asia/Kolkata": {
+      "offset_minutes": 330,
+      "offset_utc": "+05:30"
+    },
+    "Asia/Krasnoyarsk": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Kuala_Lumpur": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Kuching": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Kuwait": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Macao": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Macau": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Magadan": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Asia/Makassar": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Manila": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Muscat": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Asia/Nicosia": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Novokuznetsk": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Novosibirsk": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Omsk": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Asia/Oral": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Phnom_Penh": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Pontianak": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Pyongyang": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Asia/Qatar": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Qostanay": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Qyzylorda": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Rangoon": {
+      "offset_minutes": 390,
+      "offset_utc": "+06:30"
+    },
+    "Asia/Riyadh": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Saigon": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Sakhalin": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Asia/Samarkand": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Seoul": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Asia/Shanghai": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Singapore": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Srednekolymsk": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Asia/Taipei": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Tashkent": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Tbilisi": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Asia/Tehran": {
+      "offset_minutes": 210,
+      "offset_utc": "+03:30"
+    },
+    "Asia/Tel_Aviv": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Asia/Thimbu": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Asia/Thimphu": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Asia/Tokyo": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Asia/Tomsk": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Ujung_Pandang": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Ulaanbaatar": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Ulan_Bator": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Asia/Urumqi": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Asia/Ust-Nera": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Asia/Vientiane": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Asia/Vladivostok": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Asia/Yakutsk": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Asia/Yangon": {
+      "offset_minutes": 390,
+      "offset_utc": "+06:30"
+    },
+    "Asia/Yekaterinburg": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Asia/Yerevan": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Atlantic/Azores": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Atlantic/Bermuda": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "Atlantic/Canary": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Atlantic/Cape_Verde": {
+      "offset_minutes": -60,
+      "offset_utc": "-01:00"
+    },
+    "Atlantic/Faeroe": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Atlantic/Faroe": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Atlantic/Jan_Mayen": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Atlantic/Madeira": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Atlantic/Reykjavik": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Atlantic/South_Georgia": {
+      "offset_minutes": -120,
+      "offset_utc": "-02:00"
+    },
+    "Atlantic/St_Helena": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Atlantic/Stanley": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "Australia/ACT": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/Adelaide": {
+      "offset_minutes": 570,
+      "offset_utc": "+09:30"
+    },
+    "Australia/Brisbane": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/Broken_Hill": {
+      "offset_minutes": 570,
+      "offset_utc": "+09:30"
+    },
+    "Australia/Canberra": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/Currie": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/Darwin": {
+      "offset_minutes": 570,
+      "offset_utc": "+09:30"
+    },
+    "Australia/Eucla": {
+      "offset_minutes": 525,
+      "offset_utc": "+08:45"
+    },
+    "Australia/Hobart": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/LHI": {
+      "offset_minutes": 630,
+      "offset_utc": "+10:30"
+    },
+    "Australia/Lindeman": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/Lord_Howe": {
+      "offset_minutes": 630,
+      "offset_utc": "+10:30"
+    },
+    "Australia/Melbourne": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/NSW": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/North": {
+      "offset_minutes": 570,
+      "offset_utc": "+09:30"
+    },
+    "Australia/Perth": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Australia/Queensland": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/South": {
+      "offset_minutes": 570,
+      "offset_utc": "+09:30"
+    },
+    "Australia/Sydney": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/Tasmania": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/Victoria": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Australia/West": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Australia/Yancowinna": {
+      "offset_minutes": 570,
+      "offset_utc": "+09:30"
+    },
+    "Brazil/Acre": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "Brazil/DeNoronha": {
+      "offset_minutes": -120,
+      "offset_utc": "-02:00"
+    },
+    "Brazil/East": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "Brazil/West": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "CET": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "CST6CDT": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "Canada/Atlantic": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "Canada/Central": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "Canada/Eastern": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "Canada/Mountain": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "Canada/Newfoundland": {
+      "offset_minutes": -150,
+      "offset_utc": "-02:30"
+    },
+    "Canada/Pacific": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "Canada/Saskatchewan": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "Canada/Yukon": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "Chile/Continental": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "Chile/EasterIsland": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "Cuba": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "EET": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "EST": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "EST5EDT": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "Egypt": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Eire": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Etc/GMT": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Etc/GMT+0": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Etc/GMT+1": {
+      "offset_minutes": -60,
+      "offset_utc": "-01:00"
+    },
+    "Etc/GMT+10": {
+      "offset_minutes": -600,
+      "offset_utc": "-10:00"
+    },
+    "Etc/GMT+11": {
+      "offset_minutes": -660,
+      "offset_utc": "-11:00"
+    },
+    "Etc/GMT+12": {
+      "offset_minutes": -720,
+      "offset_utc": "-12:00"
+    },
+    "Etc/GMT+2": {
+      "offset_minutes": -120,
+      "offset_utc": "-02:00"
+    },
+    "Etc/GMT+3": {
+      "offset_minutes": -180,
+      "offset_utc": "-03:00"
+    },
+    "Etc/GMT+4": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "Etc/GMT+5": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "Etc/GMT+6": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "Etc/GMT+7": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "Etc/GMT+8": {
+      "offset_minutes": -480,
+      "offset_utc": "-08:00"
+    },
+    "Etc/GMT+9": {
+      "offset_minutes": -540,
+      "offset_utc": "-09:00"
+    },
+    "Etc/GMT-0": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Etc/GMT-1": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Etc/GMT-10": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Etc/GMT-11": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Etc/GMT-12": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Etc/GMT-13": {
+      "offset_minutes": 780,
+      "offset_utc": "+13:00"
+    },
+    "Etc/GMT-14": {
+      "offset_minutes": 840,
+      "offset_utc": "+14:00"
+    },
+    "Etc/GMT-2": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Etc/GMT-3": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Etc/GMT-4": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Etc/GMT-5": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Etc/GMT-6": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Etc/GMT-7": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Etc/GMT-8": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Etc/GMT-9": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Etc/GMT0": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Etc/Greenwich": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Etc/UCT": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Etc/UTC": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Etc/Universal": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Etc/Zulu": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Europe/Amsterdam": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Andorra": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Astrakhan": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Europe/Athens": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Belfast": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Europe/Belgrade": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Berlin": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Bratislava": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Brussels": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Bucharest": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Budapest": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Busingen": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Chisinau": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Copenhagen": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Dublin": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Europe/Gibraltar": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Guernsey": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Europe/Helsinki": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Isle_of_Man": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Europe/Istanbul": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Jersey": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Europe/Kaliningrad": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Kiev": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Kirov": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Kyiv": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Lisbon": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Europe/Ljubljana": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/London": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Europe/Luxembourg": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Madrid": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Malta": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Mariehamn": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Minsk": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Monaco": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Moscow": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Nicosia": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Oslo": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Paris": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Podgorica": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Prague": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Riga": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Rome": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Samara": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Europe/San_Marino": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Sarajevo": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Saratov": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Europe/Simferopol": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Skopje": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Sofia": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Stockholm": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Tallinn": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Tirane": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Tiraspol": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Ulyanovsk": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Europe/Uzhgorod": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Vaduz": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Vatican": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Vienna": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Vilnius": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Volgograd": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Warsaw": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Zagreb": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Europe/Zaporozhye": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Europe/Zurich": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Factory": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "GB": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "GB-Eire": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "GMT": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "GMT+0": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "GMT-0": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "GMT0": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Greenwich": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "HST": {
+      "offset_minutes": -600,
+      "offset_utc": "-10:00"
+    },
+    "Hongkong": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Iceland": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Indian/Antananarivo": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Indian/Chagos": {
+      "offset_minutes": 360,
+      "offset_utc": "+06:00"
+    },
+    "Indian/Christmas": {
+      "offset_minutes": 420,
+      "offset_utc": "+07:00"
+    },
+    "Indian/Cocos": {
+      "offset_minutes": 390,
+      "offset_utc": "+06:30"
+    },
+    "Indian/Comoro": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Indian/Kerguelen": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Indian/Mahe": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Indian/Maldives": {
+      "offset_minutes": 300,
+      "offset_utc": "+05:00"
+    },
+    "Indian/Mauritius": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Indian/Mayotte": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Indian/Reunion": {
+      "offset_minutes": 240,
+      "offset_utc": "+04:00"
+    },
+    "Iran": {
+      "offset_minutes": 210,
+      "offset_utc": "+03:30"
+    },
+    "Israel": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "Jamaica": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "Japan": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Kwajalein": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Libya": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "MET": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "MST": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "MST7MDT": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "Mexico/BajaNorte": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "Mexico/BajaSur": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "Mexico/General": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "NZ": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "NZ-CHAT": {
+      "offset_minutes": 765,
+      "offset_utc": "+12:45"
+    },
+    "Navajo": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "PRC": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "PST8PDT": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "Pacific/Apia": {
+      "offset_minutes": 780,
+      "offset_utc": "+13:00"
+    },
+    "Pacific/Auckland": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Pacific/Bougainville": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Pacific/Chatham": {
+      "offset_minutes": 765,
+      "offset_utc": "+12:45"
+    },
+    "Pacific/Chuuk": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Pacific/Easter": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "Pacific/Efate": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Pacific/Enderbury": {
+      "offset_minutes": 780,
+      "offset_utc": "+13:00"
+    },
+    "Pacific/Fakaofo": {
+      "offset_minutes": 780,
+      "offset_utc": "+13:00"
+    },
+    "Pacific/Fiji": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Pacific/Funafuti": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Pacific/Galapagos": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "Pacific/Gambier": {
+      "offset_minutes": -540,
+      "offset_utc": "-09:00"
+    },
+    "Pacific/Guadalcanal": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Pacific/Guam": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Pacific/Honolulu": {
+      "offset_minutes": -600,
+      "offset_utc": "-10:00"
+    },
+    "Pacific/Johnston": {
+      "offset_minutes": -600,
+      "offset_utc": "-10:00"
+    },
+    "Pacific/Kanton": {
+      "offset_minutes": 780,
+      "offset_utc": "+13:00"
+    },
+    "Pacific/Kiritimati": {
+      "offset_minutes": 840,
+      "offset_utc": "+14:00"
+    },
+    "Pacific/Kosrae": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Pacific/Kwajalein": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Pacific/Majuro": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Pacific/Marquesas": {
+      "offset_minutes": -570,
+      "offset_utc": "-09:30"
+    },
+    "Pacific/Midway": {
+      "offset_minutes": -660,
+      "offset_utc": "-11:00"
+    },
+    "Pacific/Nauru": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Pacific/Niue": {
+      "offset_minutes": -660,
+      "offset_utc": "-11:00"
+    },
+    "Pacific/Norfolk": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Pacific/Noumea": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Pacific/Pago_Pago": {
+      "offset_minutes": -660,
+      "offset_utc": "-11:00"
+    },
+    "Pacific/Palau": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Pacific/Pitcairn": {
+      "offset_minutes": -480,
+      "offset_utc": "-08:00"
+    },
+    "Pacific/Pohnpei": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Pacific/Ponape": {
+      "offset_minutes": 660,
+      "offset_utc": "+11:00"
+    },
+    "Pacific/Port_Moresby": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Pacific/Rarotonga": {
+      "offset_minutes": -600,
+      "offset_utc": "-10:00"
+    },
+    "Pacific/Saipan": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Pacific/Samoa": {
+      "offset_minutes": -660,
+      "offset_utc": "-11:00"
+    },
+    "Pacific/Tahiti": {
+      "offset_minutes": -600,
+      "offset_utc": "-10:00"
+    },
+    "Pacific/Tarawa": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Pacific/Tongatapu": {
+      "offset_minutes": 780,
+      "offset_utc": "+13:00"
+    },
+    "Pacific/Truk": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Pacific/Wake": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Pacific/Wallis": {
+      "offset_minutes": 720,
+      "offset_utc": "+12:00"
+    },
+    "Pacific/Yap": {
+      "offset_minutes": 600,
+      "offset_utc": "+10:00"
+    },
+    "Poland": {
+      "offset_minutes": 120,
+      "offset_utc": "+02:00"
+    },
+    "Portugal": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "ROC": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "ROK": {
+      "offset_minutes": 540,
+      "offset_utc": "+09:00"
+    },
+    "Singapore": {
+      "offset_minutes": 480,
+      "offset_utc": "+08:00"
+    },
+    "Turkey": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "UCT": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "US/Alaska": {
+      "offset_minutes": -480,
+      "offset_utc": "-08:00"
+    },
+    "US/Aleutian": {
+      "offset_minutes": -540,
+      "offset_utc": "-09:00"
+    },
+    "US/Arizona": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "US/Central": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "US/East-Indiana": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "US/Eastern": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "US/Hawaii": {
+      "offset_minutes": -600,
+      "offset_utc": "-10:00"
+    },
+    "US/Indiana-Starke": {
+      "offset_minutes": -300,
+      "offset_utc": "-05:00"
+    },
+    "US/Michigan": {
+      "offset_minutes": -240,
+      "offset_utc": "-04:00"
+    },
+    "US/Mountain": {
+      "offset_minutes": -360,
+      "offset_utc": "-06:00"
+    },
+    "US/Pacific": {
+      "offset_minutes": -420,
+      "offset_utc": "-07:00"
+    },
+    "US/Samoa": {
+      "offset_minutes": -660,
+      "offset_utc": "-11:00"
+    },
+    "UTC": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "Universal": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    },
+    "W-SU": {
+      "offset_minutes": 180,
+      "offset_utc": "+03:00"
+    },
+    "WET": {
+      "offset_minutes": 60,
+      "offset_utc": "+01:00"
+    },
+    "Zulu": {
+      "offset_minutes": 0,
+      "offset_utc": "+00:00"
+    }
+  }
+}

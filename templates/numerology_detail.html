@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}Numerology Detail — Natal Numbers{% endblock %}
+
+{% block content %}
+
+<div class="numerology-detail-page">
+  <div class="detail-header">
+    <div>
+      <p class="section-eyebrow">Numerology Deep Dive</p>
+      <h1 class="detail-title">
+        {% if birth_date_long %}{{ birth_date_long }}{% else %}Birth Date Needed{% endif %}
+      </h1>
+      <p class="detail-sub">
+        A closer look at each reduction, component, and combined number behind the report summary.
+      </p>
+    </div>
+    <a href="/#get-chart" class="btn btn-outline">Run Another Chart</a>
+  </div>
+
+  {% if errors %}
+  <div class="dash-card detail-error-card">
+    <div class="dash-card-title">Could Not Build Detail Page</div>
+    {% for error in errors %}
+    <p>{{ error }}</p>
+    {% endfor %}
+    <p>Open this page from a report summary or include a URL like <code>/numerology?birth_date=1990-05-17</code>.</p>
+  </div>
+  {% else %}
+  <div class="detail-dashboard">
+    <aside class="dash-card detail-nav-card">
+      <div class="dash-card-title">Jump To</div>
+      <nav class="detail-nav" aria-label="Numerology sections">
+        {% for item in numerology %}
+        <a href="#{{ item.id }}">
+          <span>{{ item.label }}</span>
+          <strong>{{ item.value }}</strong>
+        </a>
+        {% endfor %}
+      </nav>
+    </aside>
+
+    <div class="detail-sections">
+      {% for item in numerology %}
+      <section class="dash-card numerology-detail-card" id="{{ item.id }}">
+        <div class="detail-card-header">
+          <div>
+            <p class="section-eyebrow">{{ item.label }}</p>
+            <h2>{{ item.label }} Number</h2>
+          </div>
+          <div class="detail-number">{{ item.value }}</div>
+        </div>
+
+        <p class="detail-method">{{ item.method }}</p>
+        <div class="detail-compact-step">{{ item.steps }}</div>
+
+        <div class="detail-component-grid">
+          {% for component in item.components %}
+          <div class="detail-component">
+            <div class="detail-component-label">{{ component.label }}</div>
+            <div class="detail-component-source">{{ component.source }}</div>
+            <div class="detail-component-line">
+              <span>Digit sum</span>
+              <code>{{ component.digits }}</code>
+            </div>
+            <div class="detail-component-line">
+              <span>Reduction</span>
+              <code>{{ component.reduction }}</code>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="detail-final-grid">
+          <div>
+            <div class="detail-subtitle">Step-by-Step Result</div>
+            <ol class="detail-calculation-list">
+              {% for step in item.calculation %}
+              <li>{{ step }}</li>
+              {% endfor %}
+            </ol>
+          </div>
+          <div>
+            <div class="detail-subtitle">How To Read It</div>
+            <ul class="detail-interpretation-list">
+              {% for note in item.interpretation %}
+              <li>{{ note }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}

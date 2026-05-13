@@ -1,0 +1,8 @@
+tzdata
+pytz
+rich
+ephem
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart

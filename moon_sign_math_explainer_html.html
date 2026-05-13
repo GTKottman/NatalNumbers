@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Calculate Your Moon Sign</title>
+</head>
+<body>
+  <main class="page">
+    <nav>
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1457d9" stroke-width="1.7">
+            <circle cx="12" cy="12" r="8"></circle>
+            <path d="M12 4v16M4 12h16M6.4 6.4l11.2 11.2M17.6 6.4 6.4 17.6"></path>
+          </svg>
+        </div>
+        Natal Numbers
+      </div>
+      <div class="nav-links">
+        <span>Gather data</span>
+        <span>Convert time</span>
+        <span>Find longitude</span>
+        <button class="button">Calculate Your Moon</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">☾ General Moon sign calculation guide</div>
+        <h1>Calculate your Moon sign from <span>time, place, and angle.</span></h1>
+        <p class="hero-copy">
+          Your Moon sign is found by calculating the Moon’s apparent ecliptic longitude at the exact moment you were born. Once you have that angle, you place it into one of twelve 30° zodiac sectors.
+        </p>
+
+        <div class="input-card" aria-label="Birth information needed">
+          <div>
+            <div class="label">You need</div>
+            <div class="value">Birth city</div>
+          </div>
+          <div>
+            <div class="label">You need</div>
+            <div class="value">Birth date</div>
+          </div>
+          <div>
+            <div class="label">You need</div>
+            <div class="value">Birth time</div>
+          </div>
+          <div>
+            <div class="label">You need</div>
+            <div class="value">Time zone</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="astro-panel" aria-label="Lunar longitude visual diagram">
+        <div class="zodiac-band"></div>
+        <div class="orbit"></div>
+        <div class="orbit two"></div>
+        <div class="orbit three"></div>
+        <div class="axis-x"></div>
+        <div class="axis-y"></div>
+        <div class="sun"></div>
+        <div class="formula-float f1">Step 1: local time → UTC</div>
+        <div class="formula-float f2">Step 2: date → Julian Day</div>
+        <div class="formula-float f3">Step 3: longitude → zodiac</div>
+        <div class="degree-pill">Moon sign = sector containing λ</div>
+      </aside>
+    </section>
+
+    <section class="steps">
+      <article class="card">
+        <div class="card-number">1</div>
+        <h2>Write down your birth data</h2>
+        <p>
+          Start with your birth city, birth date, and exact birth time. The Moon moves quickly through the zodiac, so exact birth time matters much more for Moon sign calculations, especially near sign boundaries.
+        </p>
+        <div class="formula">Example format:<br>City, Country<br>YYYY-MM-DD<br>HH:MM AM/PM local time</div>
+      </article>
+
+      <article class="card">
+        <div class="card-number">2</div>
+        <h2>Convert local time to UTC</h2>
+        <p>
+          Find the correct time zone for your birthplace on your birth date, including daylight saving time if it applied. Convert the local birth time into UTC so the sky position can be calculated from one shared global clock.
+        </p>
+        <div class="formula">UTC time = local time − time zone offset<br><br>If local time is UTC−6:<br>UTC = local time + 6 hours</div>
+      </article>
+
+      <article class="card">
+        <div class="card-number">3</div>
+        <h2>Convert the date to Julian Day</h2>
+        <p>
+          Astronomical formulas use a continuous day count instead of ordinary calendar dates. This number is called the Julian Day. It lets the calculation measure how many days have passed since a reference point.
+        </p>
+        <div class="formula">Your UTC birth moment<br>→ Julian Day<br>→ days since reference epoch</div>
+      </article>
+
+      <article class="card">
+        <div class="card-number">4</div>
+        <h2>Calculate the Moon’s mean position</h2>
+        <p>
+          Astronomical software first estimates the Moon’s mean longitude before applying many orbital corrections. The Moon’s motion is more complicated because it orbits Earth while Earth orbits the Sun.
+        </p>
+        <div class="formula">L = L₀ + 13.176396° × n<br><br>n = days since the reference epoch</div>
+      </article>
+
+      <article class="card">
+        <div class="card-number">5</div>
+        <h2>Correct for lunar perturbations</h2>
+        <p>
+          The Moon’s orbit contains many oscillations and perturbations caused by Earth, the Sun, orbital eccentricity, and orbital inclination. These corrections produce the Moon’s apparent longitude λ.
+        </p>
+        <div class="formula">λ = L + Evection + Variation + Annual Equation + perturbations<br><br>λ = apparent lunar longitude</div>
+      </article>
+
+      <article class="card">
+        <div class="card-number">6</div>
+        <h2>Match the angle to a zodiac sector</h2>
+        <p>
+          The zodiac is a 360° circle split into twelve equal 30° sections. Once you know λ, your Moon sign is whichever section contains that angle.
+        </p>
+        <div class="formula">sector number = floor(λ ÷ 30)<br>Moon sign = zodiac[sector number]</div>
+      </article>
+    </section>
+
+    <section class="result">
+      <div class="result-big">
+        <h2>The Moon moves fast through the zodiac.</h2>
+        <p>
+          The Moon moves about 13° per day through the zodiac. Because of that speed, the Moon can change signs in less than three days, making exact birth time extremely important.
+        </p>
+        <div class="degree-grid">
+          <div>
+            <div class="label">Formula</div>
+            <div class="value">λ ÷ 30</div>
+          </div>
+          <div>
+            <div class="label">Result</div>
+            <div class="value">One of 12 sectors</div>
+          </div>
+        </div>
+      </div>
+
+      <article class="card">
+        <div class="card-number">7</div>
+        <h2>Use this sector table</h2>
+        <p>
+          After calculating the Moon’s ecliptic longitude, compare it to these ranges. Because the Moon moves quickly, exact astronomical timing is important near sign boundaries.
+        </p>
+        <div class="zodiac-table">
+          <div><strong>Aries</strong>0° to 30°</div>
+          <div><strong>Taurus</strong>30° to 60°</div>
+          <div><strong>Gemini</strong>60° to 90°</div>
+          <div><strong>Cancer</strong>90° to 120°</div>
+          <div><strong>Leo</strong>120° to 150°</div>
+          <div><strong>Virgo</strong>150° to 180°</div>
+          <div><strong>Libra</strong>180° to 210°</div>
+          <div><strong>Scorpio</strong>210° to 240°</div>
+          <div><strong>Sagittarius</strong>240° to 270°</div>
+          <div><strong>Capricorn</strong>270° to 300°</div>
+          <div><strong>Aquarius</strong>300° to 330°</div>
+          <div><strong>Pisces</strong>330° to 360°</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="card-number">8</div>
+      <h2>What birth location changes, and what it usually does not</h2>
+      <p>
+        Your birthplace is needed to determine the correct local time zone and daylight saving rule. For Moon sign calculations, exact birth time matters much more because the Moon moves rapidly through the zodiac. For the rising sign, houses, Midheaven, and horizon geometry, exact latitude and longitude become much more important.
+      </p>
+      <div class="note">
+        Practical shortcut: Moon signs should almost always be calculated using exact birth time and an astronomical ephemeris because the Moon changes position quickly across the zodiac.
+      </div>
+    </section>
+
+    <footer>
+      General method: birth data → UTC → Julian Day → lunar longitude → 30° zodiac sector.
+    </footer>
+  </main>
+</body>
+</html>

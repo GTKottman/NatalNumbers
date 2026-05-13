@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ========================================================
+     HERO
+======================================================== -->
+<section class="hero" id="hero">
+  <div class="hero-left">
+    <p class="eyebrow">Computational Astrology</p>
+    <h1 class="hero-headline">
+      Astrology Explained<br>by <span class="accent">Math.</span>
+    </h1>
+    <p class="hero-copy">
+      Every planet in your natal chart occupies a measurable angle on the ecliptic. We convert your birth moment to a Julian Day, compute each body's apparent ecliptic longitude, and assign it a 30° zodiac sector — no mysticism, no interpretation layers. Just geometry, orbital mechanics, and arithmetic you can inspect.
+    </p>
+    <div class="hero-actions">
+      <a href="#get-chart" class="btn btn-primary btn-lg">Get Your Free Math Report</a>
+      <p class="microcopy">No credit card required. Calculations run in seconds.</p>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="orbital-wrap" aria-label="Orbital mechanics diagram">
+      <canvas id="orbitalCanvas" width="520" height="520"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     HOW IT WORKS
+======================================================== -->
+<section class="features-section" id="how-it-works">
+  <div class="section-header">
+    <p class="section-eyebrow">The System</p>
+    <h2 class="section-title">A Mathematical Framework<br>for the Cosmos</h2>
+    <p class="section-sub">Five layers of calculation transform your birth moment into a precise planetary profile.</p>
+  </div>
+
+  <div class="feature-cards">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/>
+        </svg>
+      </div>
+      <h3>Astronomical Data</h3>
+      <p>Real-time planetary positions via the PyEphem ephemeris engine. Geocentric ecliptic coordinates accurate to arc-seconds.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 20h16M4 4h16M9 4v16M15 4v16"/><path d="M4 9h5M15 9h5M4 15h5M15 15h5"/>
+        </svg>
+      </div>
+      <h3>Mathematical Models</h3>
+      <p>Mean longitude polynomials, equations of center, and perturbation corrections derived from Meeus <em>Astronomical Algorithms</em>.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M2 12h2l3-7 4 14 3-10 2 3h6"/>
+        </svg>
+      </div>
+      <h3>Vibrational Analysis</h3>
+      <p>Ecliptic longitude and zodiac sector are digit-reduced to single-digit resonance values, making planetary positions numerically comparable.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+        </svg>
+      </div>
+      <h3>Influence Scoring</h3>
+      <p>Each planet is weighted by its ecliptic longitude, providing a normalized percentage contribution to your personal chart profile.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h3>Personalized Insight</h3>
+      <p>Every step of the calculation is shown in full — from UTC conversion through Julian Day through final zodiac assignment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     PLANET MATH
+======================================================== -->
+<section class="planet-math-section" id="planet-math">
+  <div class="section-header">
+    <p class="section-eyebrow">The Equations</p>
+    <h2 class="section-title">Each Sign Is a Sector.<br>Each Sector Is Math.</h2>
+  </div>
+
+  <div class="equation-grid">
+    <div class="eq-card">
+      <div class="eq-label">Julian Day</div>
+      <div class="eq-formula">JD = 365.25(Y+4716) + 30.6001(M+1) + D + B − 1524.5</div>
+      <div class="eq-note">Converts your UTC birth date to a continuous astronomical day count.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Sun Mean Longitude</div>
+      <div class="eq-formula">L = 280.460° + 0.9856474° × n</div>
+      <div class="eq-note">n = days since J2000.0 (JD 2451545.0)</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Equation of Center</div>
+      <div class="eq-formula">λ = L + 1.915 sin g + 0.020 sin 2g</div>
+      <div class="eq-note">Corrects from circular to elliptical orbit — the Sun's apparent longitude.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Moon Mean Longitude</div>
+      <div class="eq-formula">L = 218.3164° + 13.176396° × n</div>
+      <div class="eq-note">Moon moves ~13.2° per day; apparent longitude corrected via ephem.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Zodiac Sector</div>
+      <div class="eq-formula">sector = ⌊ λ ÷ 30 ⌋</div>
+      <div class="eq-note">360° circle ÷ 12 signs = 30° per sector. Floor division maps λ to sign.</div>
+    </div>
+    <div class="eq-card">
+      <div class="eq-label">Harmonic Ratio</div>
+      <div class="eq-formula">R = a / b = Φ ≈ 1.618</div>
+      <div class="eq-note">Golden ratio resonance used in vibrational weighting across the chart.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     BIRTH DATA FORM
+======================================================== -->
+<section class="form-section" id="get-chart">
+  <div class="form-card">
+    <div class="form-header">
+      <p class="section-eyebrow">Calculate Now</p>
+      <h2 class="section-title">Get Your Free Math Report</h2>
+      <p class="section-sub">Enter your birth data below. All calculations are shown step by step.</p>
+    </div>
+
+    {% if errors is defined and errors %}
+    <div class="form-errors" role="alert">
+      {% for e in errors %}<p>{{ e }}</p>{% endfor %}
+    </div>
+    {% endif %}
+
+    <form class="birth-form" action="/report" method="post">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="place">Birth City, Country <span class="optional">(optional)</span></label>
+          <input type="text" id="place" name="place" placeholder="e.g. Chicago, USA"
+                 value="{{ prefill.place if prefill is defined else '' }}" />
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label for="birth_date">Birth Date</label>
+          <input type="date" id="birth_date" name="birth_date" required
+                 value="{{ prefill.birth_date if prefill is defined else '' }}" />
+        </div>
+        <div class="form-group">
+          <label for="birth_time">Birth Time <span class="optional">(24-hour)</span></label>
+          <input type="time" id="birth_time" name="birth_time" required
+                 value="{{ prefill.birth_time if prefill is defined else '' }}" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="timezone">IANA Time Zone</label>
+          <select id="timezone" name="timezone" required>
+            <option value="">Select your time zone…</option>
+            {% for tz in timezones %}
+            <option value="{{ tz }}"
+              {% if prefill is defined and prefill.timezone == tz %}selected{% endif %}>
+              {{ tz }}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary btn-lg">Calculate My Chart</button>
+        <p class="microcopy">Your data is used only for this calculation. Nothing is stored.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ========================================================
+     SAMPLE DASHBOARD PREVIEW
+======================================================== -->
+<section class="sample-section" id="sample">
+  <div class="section-header">
+    <p class="section-eyebrow">Report Sample</p>
+    <h2 class="section-title">Your Math Breakdown</h2>
+    <p class="section-sub">Every calculation is exposed. No black boxes.</p>
+  </div>
+
+  <div class="sample-dashboard">
+    <!-- Left: Numerology -->
+    <div class="sample-card sample-numerology">
+      <div class="sample-card-title">Numerology Summary</div>
+      <table class="num-table">
+        <tbody>
+          <tr><td>Life Path</td><td class="num-val">7</td></tr>
+          <tr><td>Destiny</td><td class="num-val">11</td></tr>
+          <tr><td>Soul Urge</td><td class="num-val">3</td></tr>
+          <tr><td>Personality</td><td class="num-val">8</td></tr>
+          <tr><td>Maturity</td><td class="num-val">9</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Center: Planet table -->
+    <div class="sample-card sample-planets">
+      <div class="sample-card-title">Planetary Positions</div>
+      <div class="planet-table-wrap">
+        <table class="planet-table">
+          <thead>
+            <tr>
+              <th>Planet</th>
+              <th>Position</th>
+              <th>Degree</th>
+              <th>Calculation</th>
+              <th>Vib #</th>
+              <th>Influence %</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="planet-dot" style="background:#1a4fd6"></span>Sun</td>
+              <td>Taurus</td>
+              <td>42.18°</td>
+              <td class="calc-cell">3+3+2+1 = 6</td>
+              <td class="vib-num">6</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:58%"></div>
+                  <span>58%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="planet-dot" style="background:#6b8de3"></span>Moon</td>
+              <td>Scorpio</td>
+              <td>217.44°</td>
+              <td class="calc-cell">1+7+4+8 = 20 → 2</td>
+              <td class="vib-num">2</td>
+              <td>
+                <div class="influence-bar-wrap">
+                  <div class="influence-bar" style="width:42%"></div>
+                  <span>42%</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Right: Donut chart -->
+    <div class="sample-card sample-chart">
+      <div class="sample-card-title">Influence Distribution</div>
+      <canvas id="sampleDonut" width="200" height="200"></canvas>
+      <div class="donut-legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#1a4fd6"></span>Sun — 58%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#6b8de3"></span>Moon — 42%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     VALUE PROPS
+======================================================== -->
+<section class="values-section" id="about">
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/>
+        </svg>
+      </div>
+      <h3>Math removes the mystery.</h3>
+      <p>Every zodiac sign assignment is the result of a floor division on a computed ecliptic longitude. The formula is shown.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        </svg>
+      </div>
+      <h3>Objective.</h3>
+      <p>The same birth data always produces the same planetary positions. No interpretation variance, no editorial drift.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <h3>Transparent.</h3>
+      <p>Julian Day, mean longitude, equation of center, apparent longitude — each intermediate value is printed in your report.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+      </div>
+      <h3>Empowering.</h3>
+      <p>Understanding the geometry means you can verify any result independently. Natal Numbers is a tool, not an oracle.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/orbital.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    drawOrbitalDiagram('orbitalCanvas');
+    drawDonut('sampleDonut', [
+      { label: 'Sun', value: 58, color: '#1a4fd6' },
+      { label: 'Moon', value: 42, color: '#6b8de3' },
+    ]);
+  });
+</script>
+{% endblock %}
