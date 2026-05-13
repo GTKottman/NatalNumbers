@@ -32,8 +32,11 @@
 
     ctx.clearRect(0, 0, W, H);
 
-    // Background
-    ctx.fillStyle = '#f8f9fb';
+    // ── Radial gradient background ──
+    var bgGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, W * 0.72);
+    bgGrad.addColorStop(0, '#ffffff');
+    bgGrad.addColorStop(1, '#f0f2f7');
+    ctx.fillStyle = bgGrad;
     ctx.fillRect(0, 0, W, H);
 
     // ── Blueprint axis lines ──
@@ -43,7 +46,6 @@
     ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(cx, 0); ctx.lineTo(cx, H); ctx.stroke();
     ctx.beginPath(); ctx.moveTo(0, cy); ctx.lineTo(W, cy); ctx.stroke();
-    // diagonal guides
     ctx.setLineDash([3, 8]);
     ctx.strokeStyle = '#d4d8e2';
     ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(W, H); ctx.stroke();
@@ -53,10 +55,11 @@
     // ── Concentric orbit rings ──
     var radii = [62, 104, 148, 192, 228];
     radii.forEach(function (r, i) {
+      var isOuter = i === radii.length - 1;
       ctx.save();
-      ctx.strokeStyle = i === 2 ? BLUE_MUTED : BORDER;
-      ctx.lineWidth = i === 2 ? 1.2 : 0.8;
-      ctx.globalAlpha = i === 2 ? 0.5 : 0.6;
+      ctx.strokeStyle = isOuter ? BLUE_MUTED : BORDER;
+      ctx.lineWidth   = isOuter ? 1.5 : 1;
+      ctx.globalAlpha = isOuter ? 0.45 : 0.7;
       ctx.beginPath();
       ctx.arc(cx, cy, r, 0, Math.PI * 2);
       ctx.stroke();
@@ -65,137 +68,143 @@
 
     // ── Zodiac tick marks on outermost ring ──
     ctx.save();
-    ctx.strokeStyle = BORDER;
-    ctx.lineWidth = 0.8;
+    ctx.strokeStyle = BLUE_MUTED;
+    ctx.lineWidth = 1;
+    ctx.globalAlpha = 0.35;
     for (var i = 0; i < 12; i++) {
       var angle = (i / 12) * Math.PI * 2 - Math.PI / 2;
-      var innerR = 228;
-      var outerR = 240;
       ctx.beginPath();
-      ctx.moveTo(cx + Math.cos(angle) * innerR, cy + Math.sin(angle) * innerR);
-      ctx.lineTo(cx + Math.cos(angle) * outerR, cy + Math.sin(angle) * outerR);
+      ctx.moveTo(cx + Math.cos(angle) * 228, cy + Math.sin(angle) * 228);
+      ctx.lineTo(cx + Math.cos(angle) * 242, cy + Math.sin(angle) * 242);
       ctx.stroke();
     }
     ctx.restore();
 
-    // ── Central hexagonal polygon ──
+    // ── Central hexagonal polygons ──
     drawPolygon(ctx, cx, cy, 6, 48, BLUE, 0.18, 1.2);
     drawPolygon(ctx, cx, cy, 6, 32, BLUE, 0.10, 0.9);
 
     // ── Sun center ──
     ctx.save();
-    var sunGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, 14);
+    var sunGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, 16);
     sunGrad.addColorStop(0, '#fffbe6');
-    sunGrad.addColorStop(1, '#f5c842');
+    sunGrad.addColorStop(0.6, '#f5c842');
+    sunGrad.addColorStop(1, '#e0a800');
     ctx.fillStyle = sunGrad;
     ctx.beginPath();
-    ctx.arc(cx, cy, 10, 0, Math.PI * 2);
+    ctx.arc(cx, cy, 12, 0, Math.PI * 2);
     ctx.fill();
-    ctx.strokeStyle = '#e0a800';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#c98a00';
+    ctx.lineWidth = 1.5;
     ctx.stroke();
     ctx.restore();
 
-    // ── Planet nodes ──
+    // ── Planet nodes (no connector lines) ──
     var planets = [
-      { r: 62,  angle: -0.8,  label: '☿', color: '#9b9b9b', size: 5 },
-      { r: 104, angle: 0.6,   label: '♀', color: '#c48a3a', size: 6 },
-      { r: 148, angle: -2.1,  label: '♂', color: '#c04040', size: 5 },
-      { r: 192, angle: 1.4,   label: '♃', color: '#7a5c2e', size: 8 },
-      { r: 228, angle: -1.0,  label: '♄', color: '#5c6e7a', size: 7 },
+      { r: 62,  angle: -0.8,  label: '☿', color: '#8a8a9a', size: 8  },
+      { r: 104, angle: 0.6,   label: '♀', color: '#c48a3a', size: 9  },
+      { r: 148, angle: -2.1,  label: '♂', color: '#c04040', size: 8  },
+      { r: 192, angle: 1.4,   label: '♃', color: '#6b7fd4', size: 11 },
+      { r: 228, angle: -1.0,  label: '♄', color: '#5c6e7a', size: 10 },
     ];
 
     planets.forEach(function (p) {
       var px = cx + Math.cos(p.angle) * p.r;
       var py = cy + Math.sin(p.angle) * p.r;
 
-      // orbit-to-node connector line
+      // node with soft shadow ring
       ctx.save();
-      ctx.strokeStyle = BORDER;
-      ctx.lineWidth = 0.6;
-      ctx.setLineDash([2, 5]);
       ctx.beginPath();
-      ctx.moveTo(cx, cy);
-      ctx.lineTo(px, py);
-      ctx.stroke();
+      ctx.arc(px, py, p.size + 3, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = 0.15;
+      ctx.fill();
       ctx.restore();
 
-      // node
       ctx.save();
       ctx.fillStyle = p.color;
       ctx.beginPath();
       ctx.arc(px, py, p.size, 0, Math.PI * 2);
       ctx.fill();
       ctx.strokeStyle = '#fff';
-      ctx.lineWidth = 1.5;
+      ctx.lineWidth = 2;
       ctx.stroke();
       ctx.restore();
 
-      // symbol label
+      // symbol label -- offset outward along the planet's own angle
+      var labelDist = p.r + p.size + 14;
+      var lx = cx + Math.cos(p.angle) * labelDist;
+      var ly = cy + Math.sin(p.angle) * labelDist;
+      // keep label inside canvas bounds
+      lx = Math.max(14, Math.min(W - 14, lx));
+      ly = Math.max(14, Math.min(H - 14, ly));
       ctx.save();
-      ctx.font = 'bold 11px sans-serif';
+      ctx.font = 'bold 12px sans-serif';
       ctx.fillStyle = TEXT;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText(p.label, px + (px > cx ? 14 : -14), py + (py > cy ? 14 : -14));
+      ctx.fillText(p.label, lx, ly);
       ctx.restore();
     });
 
-    // ── Floating formula labels ──
+    // ── Two styled formula pills (top-left, bottom-right) ──
     var formulas = [
-      { x: 0.08, y: 0.12, text: 'θ = 360° × d / 2πr' },
-      { x: 0.54, y: 0.08, text: 'T = 2π√(a³ / GM)' },
-      { x: 0.06, y: 0.82, text: 'R = a/b = Φ ≈ 1.618' },
-      { x: 0.52, y: 0.88, text: 'V = Σ digits / n' },
+      { x: 0.05, y: 0.10, text: 'θ = 360° × d / 2πr' },
+      { x: 0.50, y: 0.91, text: 'T = 2π√(a³/GM)'     },
     ];
 
     formulas.forEach(function (f) {
       var fx = f.x * W;
       var fy = f.y * H;
       ctx.save();
-      ctx.font = '10px Menlo, Consolas, monospace';
+      ctx.font = '500 10px Menlo, Consolas, monospace';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      var tw = ctx.measureText(f.text).width;
+      var pad = 7;
+      var ph = 18;
+      roundRect(ctx, fx, fy - ph / 2, tw + pad * 2, ph, 5);
+      ctx.fillStyle = BLUE_TINT;
+      ctx.fill();
+      ctx.strokeStyle = BLUE_MUTED;
+      ctx.globalAlpha = 0.5;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
       ctx.fillStyle = BLUE;
-      ctx.globalAlpha = 0.65;
-      ctx.fillText(f.text, fx, fy);
+      ctx.fillText(f.text, fx + pad, fy);
       ctx.restore();
     });
 
     // ── Annotation chips ──
     var chips = [
-      { x: 0.60, y: 0.35, text: 'Orbital Mechanics' },
-      { x: 0.05, y: 0.50, text: 'Harmonic Ratio' },
-      { x: 0.60, y: 0.62, text: 'Degrees of Influence' },
+      { x: 0.60, y: 0.33, text: 'Orbital Mechanics'   },
+      { x: 0.04, y: 0.50, text: 'Harmonic Ratio'       },
+      { x: 0.58, y: 0.64, text: 'Degrees of Influence' },
     ];
 
     chips.forEach(function (c) {
       var chipX = c.x * W;
       var chipY = c.y * H;
       ctx.save();
-      ctx.font = '600 9px Inter, sans-serif';
-      ctx.fillStyle = TEXT_3;
-      var metrics = ctx.measureText(c.text);
-      var pad = 6;
-      // pill background
+      ctx.font = '600 10px Inter, sans-serif';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      var tw = ctx.measureText(c.text).width;
+      var pad = 8;
+      var ph = 20;
+      roundRect(ctx, chipX, chipY - ph / 2, tw + pad * 2, ph, 5);
       ctx.fillStyle = '#fff';
+      ctx.fill();
       ctx.strokeStyle = BORDER;
       ctx.lineWidth = 1;
-      roundRect(ctx, chipX - pad, chipY - 9, metrics.width + pad * 2, 16, 4);
-      ctx.fill(); ctx.stroke();
+      ctx.stroke();
       ctx.fillStyle = TEXT_3;
-      ctx.font = '600 9px Inter, sans-serif';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(c.text, chipX, chipY - 1);
+      ctx.fillText(c.text, chipX + pad, chipY);
       ctx.restore();
     });
 
-    // ── Degree scale arc label ──
-    ctx.save();
-    ctx.font = '9px Menlo, Consolas, monospace';
-    ctx.fillStyle = BLUE_MUTED;
-    ctx.globalAlpha = 0.6;
-    var labelAngle = -Math.PI * 0.25;
-    ctx.fillText('λ →', cx + Math.cos(labelAngle) * 108, cy + Math.sin(labelAngle) * 108);
-    ctx.restore();
+    stabilizeCanvasDisplay(canvas, 'Orbital mechanics diagram');
   }
 
   /* ──────────────────────────────────────────────
@@ -414,13 +423,12 @@
 
     var img = document.createElement('img');
     img.src = canvas.toDataURL('image/png');
-    img.width = canvas.width;
-    img.height = canvas.height;
     img.alt = canvas.getAttribute('aria-label') || altText || 'Chart';
     img.className = canvas.className;
     img.id = canvas.id;
     img.style.display = 'block';
-    img.style.maxWidth = '100%';
+    img.style.width = '100%';
+    img.style.height = 'auto';
 
     parent.replaceChild(img, canvas);
   }
