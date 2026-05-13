@@ -150,12 +150,37 @@
     </div>
     {% endif %}
 
-    <form class="birth-form" action="/report" method="post">
+    <form class="birth-form" action="/report" method="post" data-location-form>
       <div class="form-row">
-        <div class="form-group">
-          <label for="place">Birth City, Country <span class="optional">(optional)</span></label>
-          <input type="text" id="place" name="place" placeholder="e.g. Chicago, USA"
-                 value="{{ prefill.place if prefill is defined else '' }}" />
+        <div class="form-group location-picker-field">
+          <label for="birthplace-search">Birth Place</label>
+          <input type="hidden" id="place" name="place" value="{{ prefill.place if prefill is defined else '' }}" />
+          <input type="hidden" id="timezone" name="timezone" value="{{ prefill.timezone if prefill is defined else '' }}" />
+
+          <div class="selected-location" data-selected-location>
+            <div>
+              <span class="selected-location-label" data-location-label>
+                {% if prefill is defined and prefill.place %}
+                  {{ prefill.place }}
+                {% else %}
+                  No birth place selected
+                {% endif %}
+              </span>
+              <span class="selected-location-meta" data-location-meta>
+                {% if prefill is defined and prefill.timezone %}
+                  {{ prefill.timezone }}
+                {% else %}
+                  Choose the nearest major city in your birth timezone.
+                {% endif %}
+              </span>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-outline location-picker-trigger" data-location-open>
+            Choose Birth Place
+          </button>
+          <p class="field-help">Pick the closest major city. Exact coordinates are not required for this report.</p>
+          <p class="location-validation" data-location-validation role="alert" hidden>Please choose a birth place before calculating.</p>
         </div>
       </div>
 
@@ -172,26 +197,41 @@
         </div>
       </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="timezone">IANA Time Zone</label>
-          <select id="timezone" name="timezone" required>
-            <option value="">Select your time zone…</option>
-            {% for tz in timezones %}
-            <option value="{{ tz }}"
-              {% if prefill is defined and prefill.timezone == tz %}selected{% endif %}>
-              {{ tz }}
-            </option>
-            {% endfor %}
-          </select>
-        </div>
-      </div>
-
       <div class="form-submit">
         <button type="submit" class="btn btn-primary btn-lg">Calculate My Chart</button>
         <p class="microcopy">Your data is used only for this calculation. Nothing is stored.</p>
       </div>
     </form>
+  </div>
+
+  <div class="location-modal" data-location-modal hidden>
+    <div class="location-modal-backdrop" data-location-close></div>
+    <div class="location-dialog" role="dialog" aria-modal="true" aria-labelledby="location-dialog-title">
+      <div class="location-dialog-header">
+        <div>
+          <p class="section-eyebrow">Birth Place</p>
+          <h3 id="location-dialog-title">Choose the nearest major city</h3>
+          <p>Search or browse by area. The app will use that city's timezone for the chart.</p>
+        </div>
+        <button type="button" class="location-close" data-location-close aria-label="Close birth place picker">x</button>
+      </div>
+
+      <div class="location-map-panel" aria-hidden="true">
+        <span>Americas</span>
+        <span>Europe</span>
+        <span>Africa</span>
+        <span>Asia</span>
+        <span>Oceania</span>
+      </div>
+
+      <div class="location-search-wrap">
+        <label for="birthplace-search">Search city or country</label>
+        <input type="search" id="birthplace-search" data-location-search placeholder="e.g. Chicago, London, Tokyo" autocomplete="off" />
+      </div>
+
+      <div class="location-region-list" data-location-regions aria-label="Browse cities by area"></div>
+      <div class="location-results" data-location-results aria-live="polite"></div>
+    </div>
   </div>
 </section>
 
@@ -330,6 +370,7 @@
 
 {% block scripts %}
 <script src="/static/orbital.js"></script>
+<script src="/static/location-picker.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     drawOrbitalDiagram('orbitalCanvas');
