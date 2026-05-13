@@ -6,8 +6,8 @@ from datetime import datetime, timezone
 
 import ephem
 
-from natal_positions import NATAL_BODIES, natal_positions
-from tropical_zodiac import TROPICAL_SIGNS
+from horoscoped.astro.natal_positions import NATAL_BODIES, natal_positions
+from horoscoped.astro.tropical_zodiac import TROPICAL_SIGNS
 
 
 class NatalPositionsTest(unittest.TestCase):

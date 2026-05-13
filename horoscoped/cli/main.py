@@ -1,10 +1,10 @@
 from datetime import datetime
 
-from julian_day import julian_day_ut
-from moon_math import local_to_utc, moon_longitude_pipeline
-from sign_presenters import present_moon, present_sun
-from sun_math import sun_longitude
-from timezone_converter import IANA_TIMEZONE_LIST
+from horoscoped.astro.julian_day import julian_day_ut
+from horoscoped.astro.moon_math import local_to_utc, moon_longitude_pipeline
+from horoscoped.cli.sign_presenters import present_moon, present_sun
+from horoscoped.astro.sun_math import sun_longitude
+from horoscoped.timezone_converter import IANA_TIMEZONE_LIST
 
 
 def _parse_local_datetime(date_str: str, time_str: str) -> datetime:

@@ -4,8 +4,8 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 
-from moon_math import moon_longitude_pipeline
-from sign_presenters import present_moon
+from horoscoped.astro.moon_math import moon_longitude_pipeline
+from horoscoped.cli.sign_presenters import present_moon
 from zoneinfo import ZoneInfo
 
 

@@ -4,9 +4,9 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 
-from julian_day import julian_day_ut
-from sign_presenters import present_sun
-from sun_math import sun_longitude
+from horoscoped.astro.julian_day import julian_day_ut
+from horoscoped.cli.sign_presenters import present_sun
+from horoscoped.astro.sun_math import sun_longitude
 from zoneinfo import ZoneInfo
 
 

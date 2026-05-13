@@ -1,6 +1,6 @@
 # Horoscoped V2
 
-FastAPI web app and command-line tools for birth-date astrology and numerology reports. The app calculates tropical zodiac placements, renders natal chart and numerology pages, and pulls structured interpretation text from the `Sign info` markdown files.
+FastAPI web app and command-line tools for birth-date astrology and numerology reports. The app calculates tropical zodiac placements, renders natal chart and numerology pages, and pulls structured interpretation text from packaged markdown files.
 
 ## Features
 
@@ -12,12 +12,13 @@ FastAPI web app and command-line tools for birth-date astrology and numerology r
 
 ## Project Structure
 
-- `app.py` - FastAPI routes and report assembly.
-- `templates/` - Jinja templates for the web UI.
-- `static/` - CSS and browser-side assets.
-- `moon_math/`, `sun_math.py`, `julian_day.py` - astronomy and time conversion helpers.
-- `sign_interpretations.py` - parser and derived metadata for `Sign info/`.
-- `test_*.py` - unittest coverage for natal positions and sign interpretation parsing.
+- `horoscoped/web/` - FastAPI app, report assembly, Jinja templates, and static assets.
+- `horoscoped/astro/` - astronomy, zodiac, Julian Day, Sun, Moon, and natal position helpers.
+- `horoscoped/content/` - parser and derived metadata for packaged sign interpretation markdown.
+- `horoscoped/data/` - packaged sign interpretation files and reference data.
+- `horoscoped/cli/` - command-line entry points and Rich presenters.
+- `docs/` - standalone explainers and supporting documentation.
+- `tests/` - unittest coverage for calculations, interpretation parsing, and web routes.
 
 ## Setup
 
@@ -40,7 +41,7 @@ python -m pip install -r requirements.txt
 ## Run the Web App
 
 ```powershell
-uvicorn app:app --reload
+uvicorn horoscoped.web.app:app --reload
 ```
 
 Open `http://127.0.0.1:8000` in your browser.
@@ -50,25 +51,25 @@ Open `http://127.0.0.1:8000` in your browser.
 Interactive Sun and Moon report:
 
 ```powershell
-python main.py
+python -m horoscoped.cli.main
 ```
 
 Sun sign explainer:
 
 ```powershell
-python sun_sign_cli.py --date 1990-05-17 --time 14:30 --tz America/New_York
+python -m horoscoped.cli.sun_sign_cli --date 1990-05-17 --time 14:30 --tz America/New_York
 ```
 
 Moon sign explainer:
 
 ```powershell
-python moon_sign_cli.py --date 1990-05-17 --time 14:30 --tz America/New_York
+python -m horoscoped.cli.moon_sign_cli --date 1990-05-17 --time 14:30 --tz America/New_York
 ```
 
 ## Tests
 
 ```powershell
-python -m unittest
+python -m unittest discover -s tests
 ```
 
 ## Notes

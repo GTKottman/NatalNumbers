@@ -3,6 +3,7 @@ pytz
 rich
 ephem
 fastapi
+httpx
 uvicorn[standard]
 jinja2
 python-multipart

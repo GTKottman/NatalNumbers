@@ -4,12 +4,12 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime, timezone
 
-from julian_day import J2000_JD, julian_day_ut
-from tropical_zodiac import TROPICAL_SIGNS
+from horoscoped.astro.julian_day import J2000_JD, julian_day_ut
+from horoscoped.astro.tropical_zodiac import TROPICAL_SIGNS
 
-from moon_math.constants import MEAN_L0_DEG, MEAN_MOTION_DEG_PER_DAY
-from moon_math.ephemeris import apparent_moon_ecliptic_longitude_deg
-from moon_math.time_conversion import local_to_utc
+from horoscoped.astro.moon_math.constants import MEAN_L0_DEG, MEAN_MOTION_DEG_PER_DAY
+from horoscoped.astro.moon_math.ephemeris import apparent_moon_ecliptic_longitude_deg
+from horoscoped.astro.moon_math.time_conversion import local_to_utc
 
 
 def mean_moon_longitude_deg(jd_ut: float) -> float:
@@ -33,7 +33,7 @@ def longitude_to_sign_name(lambda_deg: float) -> str:
 
 @dataclass(frozen=True)
 class MoonLongitude:
-    """Intermediate values for explainer UI (matches moon_sign_math_explainer_html.html)."""
+    """Intermediate values for explainer UI (matches docs/moon_sign_math_explainer.html)."""
 
     jd: float
     n: float

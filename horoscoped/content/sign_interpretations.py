@@ -1,4 +1,4 @@
-"""Structured interpretation data derived from the Sign info markdown files."""
+"""Structured interpretation data derived from packaged sign markdown files."""
 from __future__ import annotations
 
 import re
@@ -6,11 +6,11 @@ from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 
-from tropical_zodiac import TROPICAL_SIGNS
+from horoscoped.astro.tropical_zodiac import TROPICAL_SIGNS
 
 
-BASE_DIR = Path(__file__).parent
-SIGN_INFO_DIR = BASE_DIR / "Sign info"
+PACKAGE_DIR = Path(__file__).resolve().parents[1]
+SIGN_INFO_DIR = PACKAGE_DIR / "data" / "sign_info"
 
 BODY_DOC_FILES: dict[str, str] = {
     "sun": "sun_sign_zodiac_summaries.md",

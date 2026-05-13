@@ -4,13 +4,13 @@ import re
 import unittest
 from pathlib import Path
 
-from sign_interpretations import (
+from horoscoped.content.sign_interpretations import (
     BODY_DOC_FILES,
     SIGN_INFO_DIR,
     load_interpretation_documents,
     placement_lookup,
 )
-from tropical_zodiac import TROPICAL_SIGNS
+from horoscoped.astro.tropical_zodiac import TROPICAL_SIGNS
 
 
 class SignInterpretationsTest(unittest.TestCase):

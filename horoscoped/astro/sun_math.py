@@ -4,8 +4,8 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass
 
-from julian_day import J2000_JD
-from tropical_zodiac import TROPICAL_SIGNS
+from horoscoped.astro.julian_day import J2000_JD
+from horoscoped.astro.tropical_zodiac import TROPICAL_SIGNS
 
 
 def _norm360(x: float) -> float:

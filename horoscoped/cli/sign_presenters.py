@@ -10,9 +10,9 @@ from rich.live import Live
 from rich.panel import Panel
 from rich.table import Table
 
-from moon_math.constants import MEAN_L0_DEG, MEAN_MOTION_DEG_PER_DAY
-from moon_math.longitude import MoonLongitude
-from sun_math import SunLongitude
+from horoscoped.astro.moon_math.constants import MEAN_L0_DEG, MEAN_MOTION_DEG_PER_DAY
+from horoscoped.astro.moon_math.longitude import MoonLongitude
+from horoscoped.astro.sun_math import SunLongitude
 
 console = Console(legacy_windows=False)
 

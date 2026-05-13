@@ -8,7 +8,7 @@ from typing import Callable
 
 import ephem
 
-from tropical_zodiac import TROPICAL_SIGNS
+from horoscoped.astro.tropical_zodiac import TROPICAL_SIGNS
 
 
 BodyFactory = Callable[[], ephem.Body]
